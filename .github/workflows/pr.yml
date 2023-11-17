@@ -14,9 +14,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Run Lint
+      - name: Lint
         run: |
-          npx turbo run lint
+          docker-compose up lint --exit-code-from lint
 
       - name: Run Cypress E2E Tests
         run: |

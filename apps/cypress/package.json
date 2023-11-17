@@ -5,6 +5,7 @@
     "cypress": "^13.5.1"
   },
   "scripts": {
+    "cache:install": "pnpm i --frozen-lockfile",
     "test:gui": "cypress open"
   }
 }

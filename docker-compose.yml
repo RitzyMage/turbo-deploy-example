@@ -23,6 +23,14 @@ services:
       - ./apps/cypress:/e2e
     networks:
       - app_network
+  lint:
+    container_name: lint
+    build:
+      context: .
+      dockerfile: ./apps/lint/Dockerfile
+      args:
+        - TURBO_TEAM=team_zkbApXLPq1ehBfUamvNmlnQ1
+        - TURBO_TOKEN=$TURBO_DOCKER_TOKEN
 # Define a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
 networks:
