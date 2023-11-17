@@ -22,4 +22,5 @@ jobs:
         if: always()
         run: |
           docker-compose down --remove-orphans
-          docker rmi ${DOCKER_SERVER_IMAGE:-ucg-server:latest}
+          docker rmi turbo-deploy-example-web
+          docker rmi turbo-deploy-example-cypress
