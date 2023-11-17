@@ -18,7 +18,7 @@ jobs:
         run: docker-compose run lint
 
       - name: Run Web
-        run: docker-compose up web
+        run: docker-compose up web -d
 
       - name: Run Cypress E2E Tests
         run: docker-compose run cypress
