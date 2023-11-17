@@ -1,0 +1,35 @@
+name: PR Test
+on:
+  pull_request:
+    branches:
+      - master
+env:
+  TURBO_DOCKER_TOKEN: ${{secrets.TURBO_DOCKER_TOKEN}}
+
+jobs:
+  test:
+    name: Lint, Audit, and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Lint
+        run: docker-compose run lint
+
+      - name: Set up DB
+        run: docker-compose up -d db
+
+      - name: Run Web
+        run: docker-compose up -d web
+
+      - name: Run Cypress E2E Tests
+        run: docker-compose run cypress
+
+      - name: Tear Down
+        if: always()
+        run: |
+          docker-compose down --remove-orphans
+          docker rmi turbo-deploy-example_web
+          docker rmi turbo-deploy-example_lint
+          docker rmi cypress/included:13.5.1
