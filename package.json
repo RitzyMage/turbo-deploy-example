@@ -4,6 +4,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "test:gui": "pnpm --filter=cypress test:gui",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
