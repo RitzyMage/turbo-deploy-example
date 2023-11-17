@@ -16,7 +16,7 @@ jobs:
 
       - name: Run Lint
         run: |
-          npm run lint
+          npx turbo run lint
 
       - name: Run Cypress E2E Tests
         run: |
