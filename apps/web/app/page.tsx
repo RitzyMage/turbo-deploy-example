@@ -1,7 +1,10 @@
+import ClickableButton from './clickable-button';
+
 export default function Page(): JSX.Element {
   return (
-    <div className="p-2 bg-slate-700 h-full flex-grow shadow">
-      <button className="block bg-emerald-500 hover:shadow hover:bg-emerald-600">click mee</button>
+    <div className="p-2 bg-slate-700/25 h-full flex-grow shadow">
+      <h1 className="text-2xl font-header">Button Page</h1>
+      <ClickableButton />
     </div>
   );
 }
