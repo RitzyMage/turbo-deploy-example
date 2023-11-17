@@ -20,7 +20,8 @@ jobs:
 
       - name: Run Cypress E2E Tests
         run: |
-          docker-compose up --exit-code-from cypress
+          docker-compose up server
+          docker-compose run cypress
 
       - name: Tear Down
         if: always()
