@@ -11,6 +11,7 @@ export default function ClickableButton(): JSX.Element {
       </div>
       <button
         className="block hover:shadow hover:from-indigo-500 hover:to-rose-600 bg-gradient-to-r from-indigo-600 to-rose-700 w-full p-2 rounded"
+        data-cy="button"
         onClick={() => setClicks(clicks + 1)}
         type="button">
         Click Me

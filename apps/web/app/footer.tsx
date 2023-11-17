@@ -11,25 +11,25 @@ export default function Footer(): JSX.Element {
       </div>
       <div className="flex flex-col">
         <div className="font-header">Important Links</div>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={linkClasses}>
+        <a className={linkClasses} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
           Whispering to Plants
         </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={linkClasses}>
+        <a className={linkClasses} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
           Expert Napping Tips
         </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={linkClasses}>
+        <a className={linkClasses} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
           Invisible Ink Supplies
         </a>
       </div>
       <div className="flex flex-col">
         <div className="font-header">Unimportant Links</div>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={linkClasses}>
+        <a className={linkClasses} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
           How Not To Burn Salad
         </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={linkClasses}>
+        <a className={linkClasses} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
           Underwater Basket Weaving
         </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={linkClasses}>
+        <a className={linkClasses} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
           Extreme Ironing Championships
         </a>
       </div>
