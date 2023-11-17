@@ -16,9 +16,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
   return (
     <html lang="en">
       <body
-        className={`${oswald.className} ${cinzel.variable} bg-slate-800 text-slate-100 flex flex-col min-h-screen`}>
+        className={`${oswald.className} ${cinzel.variable} bg-slate-800 text-slate-100 flex flex-col items-center min-h-screen`}>
         <Header />
-        <div className="flex-grow">{children}</div>
+        <div className="flex flex-col justify-stretch flex-grow w-prose w-full max-w-prose">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
