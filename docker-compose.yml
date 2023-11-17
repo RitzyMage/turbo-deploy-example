@@ -14,7 +14,15 @@ services:
       - 3000:3000
     networks:
       - app_network
-
+  cypress:
+    image: 'cypress/included:13.5.1'
+    working_dir: /e2e
+    environment:
+      - CYPRESS_baseUrl=http://web:3000
+    volumes:
+      - ./apps/cypress:/e2e
+    networks:
+      - app_network
 # Define a network, which allows containers to communicate
 # with each other, by using their container name as a hostname
 networks:
