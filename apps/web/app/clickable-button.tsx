@@ -10,7 +10,7 @@ export default function ClickableButton(): JSX.Element {
         {clicks}
       </div>
       <button
-        className="block bg-emerald-500 hover:shadow hover:bg-emerald-600 w-full p-2 rounded"
+        className="block hover:shadow hover:from-indigo-500 hover:to-rose-600 bg-gradient-to-r from-indigo-600 to-rose-700 w-full p-2 rounded"
         onClick={() => setClicks(clicks + 1)}
         type="button">
         Click Me
