@@ -17,6 +17,9 @@ jobs:
       - name: Lint
         run: docker-compose run lint
 
+      - name: Set up DB
+        run: docker-compose up -d db
+
       - name: Run Web
         run: docker-compose up -d web
 
