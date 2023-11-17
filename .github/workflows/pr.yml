@@ -22,5 +22,6 @@ jobs:
         if: always()
         run: |
           docker-compose down --remove-orphans
+          docker images
           docker rmi turbo-deploy-example-web
           docker rmi turbo-deploy-example-cypress
