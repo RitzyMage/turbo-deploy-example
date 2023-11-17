@@ -16,7 +16,7 @@ WORKDIR /app
 # Install dependencies based on the preferred package manager
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
-RUN pnpm cache:install
+RUN pnpm i --frozen-lockfile
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
