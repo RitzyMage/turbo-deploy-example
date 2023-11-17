@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Oswald, Cinzel } from 'next/font/google';
 import './globals.css';
+import Header from './header';
+import Footer from './footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const oswald = Oswald({ subsets: ['latin'] });
+const cinzel = Cinzel({ subsets: ['latin'], variable: '--font-header' });
 
 export const metadata: Metadata = {
   title: 'Example Deployment',
@@ -12,7 +15,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-800 text-slate-100`}>{children}</body>
+      <body
+        className={`${oswald.className} ${cinzel.variable} bg-slate-800 text-slate-100 flex flex-col min-h-screen`}>
+        <Header />
+        <div className="flex-grow">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
