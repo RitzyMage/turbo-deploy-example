@@ -16,7 +16,7 @@ jobs:
 
       - name: Lint
         run: |
-          docker-compose up lint --exit-code-from lint
+          docker-compose run lint
 
       - name: Run Cypress E2E Tests
         run: |
@@ -27,4 +27,5 @@ jobs:
         run: |
           docker-compose down --remove-orphans
           docker rmi turbo-deploy-example_web
+          docker rmi turbo-deploy-example_lint
           docker rmi cypress/included:13.5.1

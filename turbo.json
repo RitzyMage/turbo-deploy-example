@@ -6,7 +6,9 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "cache:install": {},
+    "cache:install": {
+      "outputs": ["node_modules"]
+    },
     "lint": {},
     "dev": {
       "cache": false,
